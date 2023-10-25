@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 type Section = 'GoodFood' | 'BadFood' | 'TravelStrategy' | 'Occasions' | 'Extra';
 
 export default function Home() {
-  const [activeSection, setActiveSection] = useState<Section | null>(null);
+  const [activeSection, setActiveSection] = useState<Section | null>('GoodFood'); // Set 'GoodFood' as the default
 
   const toggleSection = (section: Section) => {
     if (activeSection === section) {
