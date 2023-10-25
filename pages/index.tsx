@@ -23,15 +23,15 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Fitness Information App</title>
-        <meta name="description" content="Fitness Information App" />
+        <meta name="description" content="Things to keep in mind" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <div className={styles.grid}>
           <div className={styles.card}>
-            <h2>Fitness Info App &rarr;</h2>
-            <div className="btn-group" role="group" aria-label="Basic example">
+            <h2>Things to keep in mind &rarr;</h2>
+            <div className="btn-group" role="group" aria-label="categories">
               <button onClick={() => toggleSection('GoodFood')} type="button" className="btn btn-secondary">Good Food</button>
               <button onClick={() => toggleSection('BadFood')} type="button" className="btn btn-secondary">Bad Food</button>
               <button onClick={() => toggleSection('TravelStrategy')} type="button" className="btn btn-secondary">Travel Strategy</button>
