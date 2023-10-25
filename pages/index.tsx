@@ -46,17 +46,25 @@ export default function Home() {
                 Chicken Thigh (skinless)<br></br>
                 Lean Beef (90% lean or better)<br></br>
                 Low Fat Ghee (45 calories per 5g)<br></br>
-                White Fish
+                White Fish<br></br>
+                Hot Sauce (check nutrition info)<br></br>
+                Spices<br></br>
+                Vinaigrette (moderate amount)<br></br>
+                Black Coffee<br></br>
               </li>
             </ul>}
             {activeSection === 'BadFood' && 
             <ul className="list-group">
               <li className="list-group-item">
+                Sugar<br></br>
+                Desserts<br></br>
                 Olive Oil<br></br>
                 Fatty Beef (80% lean or more)<br></br>
                 Salmon<br></br>
                 Fried food<br></br>
                 Butter<br></br>
+                Salad Dressing<br></br>
+                Condiments like ketchup, mayo, mustard<br></br>
               </li>
             </ul>}
             {activeSection === 'TravelStrategy' && 
@@ -80,9 +88,9 @@ export default function Home() {
             {activeSection === 'Extra' && 
             <ul className="list-group">
               <li className="list-group-item">
-                Extra 1<br></br>
-                Extra 2<br></br>
-                Extra 3
+                If you know your week will get busy, front load your steps and workouts.<br></br>
+                Consider your daily step average and multiply by 7, get this total number of steps every week.<br></br>
+                Don't worry if you mess up, just know how to get back on track and do this immediately.
               </li>
             </ul>}
           </div>
