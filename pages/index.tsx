@@ -4,10 +4,12 @@ import styles from '../styles/Home.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
 
-export default function Home() {
-  const [activeSection, setActiveSection] = useState(null);
+type Section = 'GoodFood' | 'BadFood' | 'TravelStrategy' | 'Occasions' | 'Extra';
 
-  const toggleSection = (section) => {
+export default function Home() {
+  const [activeSection, setActiveSection] = useState<Section | null>(null);
+
+  const toggleSection = (section: Section) => {
     if (activeSection === section) {
       // If the same section is clicked again, hide it
       setActiveSection(null);
