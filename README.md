@@ -1,4 +1,14 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Fitness Information App
+The purpose of this app is to display all the information I currently have around what works best for me in terms of fitness, specifically around nutrition, training, and staying active.
+
+# Release Notes
+## v0.1.0
+Initial version
+Created foundation of app
+Using Bootstrap JS for CSS, not working perfectly yet.
+Designed to be used within an iframe on my [Notes](https://notes.salmanmalik.co/Fitness/Strategy_Guide) site.
+
+## v0.1.1
 
 ## Getting Started
 
@@ -27,8 +37,9 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Deployed on AWS Amplify
+1. Create new app in Amplify
+2. Host Web App
+3. Connect code repo
+4. Connect branch to delpoy from
+5. Let it rip
