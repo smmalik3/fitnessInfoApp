@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
 
-type Section = 'GoodFood' | 'BadFood' | 'TravelStrategy' | 'Occasions' | 'Extra';
+type Section = 'GoodFood' | 'BadFood' | 'TravelStrategy' | 'Occasions' | 'Tips';
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<Section | null>('GoodFood'); // Set 'GoodFood' as the default
@@ -36,63 +36,111 @@ export default function Home() {
               <button onClick={() => toggleSection('BadFood')} type="button" className="btn btn-secondary">Bad Food</button>
               <button onClick={() => toggleSection('TravelStrategy')} type="button" className="btn btn-secondary">Travel Strategy</button>
               <button onClick={() => toggleSection('Occasions')} type="button" className="btn btn-secondary">Occasions</button>
-              <button onClick={() => toggleSection('Extra')} type="button" className="btn btn-secondary">Extra</button>
+              <button onClick={() => toggleSection('Tips')} type="button" className="btn btn-secondary">Tips</button>
             </div>
 
             {activeSection === 'GoodFood' && 
-            <ul className="list-group">
+            <ol className="list-group">
               <li className="list-group-item">
-                Chicken Breast<br></br>
-                Chicken Thigh (skinless)<br></br>
-                Lean Beef (90% lean or better)<br></br>
-                Low Fat Ghee (45 calories per 5g)<br></br>
-                White Fish<br></br>
-                Hot Sauce (check nutrition info)<br></br>
-                Spices<br></br>
-                Vinaigrette (moderate amount)<br></br>
-                Black Coffee<br></br>
+                Chicken Breast
               </li>
-            </ul>}
+              <li className="list-group-item">
+                Chicken Thigh (skinless)
+              </li>
+              <li className="list-group-item">
+                Lean Beef (90% lean or better)
+              </li>
+              <li className="list-group-item">
+                Low Fat Ghee (45 calories per 5g)
+              </li>
+              <li className="list-group-item">
+                White Fish
+              </li>
+              <li className="list-group-item">
+                Hot Sauce (check nutrition info)
+              </li>
+              <li className="list-group-item">
+                Spices
+              </li>
+              <li className="list-group-item">
+                Vinaigrette (moderate amount)
+              </li>
+              <li className="list-group-item">
+                Black Coffee
+              </li>
+            </ol>}
             {activeSection === 'BadFood' && 
-            <ul className="list-group">
+            <ol className="list-group">
               <li className="list-group-item">
-                Sugar<br></br>
-                Desserts<br></br>
-                Olive Oil<br></br>
-                Fatty Beef (80% lean or more)<br></br>
-                Salmon<br></br>
-                Fried food<br></br>
-                Butter<br></br>
-                Salad Dressing<br></br>
-                Condiments like ketchup, mayo, mustard<br></br>
+                Sugar
               </li>
-            </ul>}
+              <li className="list-group-item">
+                Desserts
+              </li>
+              <li className="list-group-item">
+                Olive Oil
+              </li>
+              <li className="list-group-item">
+                Fatty Beef (80% lean or more)
+              </li>
+              <li className="list-group-item">
+                Salmon
+              </li>
+              <li className="list-group-item">
+                Fried food
+              </li>
+              <li className="list-group-item">
+                Butter
+              </li>
+              <li className="list-group-item">
+                Salad Dressing
+              </li>
+              <li className="list-group-item">
+                Condiments like ketchup, mayo, mustard
+              </li>
+            </ol>}
             {activeSection === 'TravelStrategy' && 
-            <ul className="list-group">
+            <ol className="list-group">
               <li className="list-group-item">
-                Get Steps/Workout in early in the day<br></br>
-                Prioritize protein, then carbs, then fat for meals<br></br>
-                Err on the side of caution, eat less than you think<br></br>
-                Bring protein bars<br></br>
+                Get Steps/Workout in early in the day
               </li>
-            </ul>}
+              <li className="list-group-item">
+                Prioritize protein, then carbs, then fat for meals
+              </li>
+              <li className="list-group-item">
+                Err on the side of caution, eat less than you think
+              </li>
+              <li className="list-group-item">
+                Bring protein bars
+              </li>
+            </ol>}
             {activeSection === 'Occasions' && 
-            <ul className="list-group">
+            <ol className="list-group">
               <li className="list-group-item">
-                Similar strategy to travel<br></br>
-                Prioritize protein, then carbs, then fat for meals<br></br>
-                Workout and get steps in before the event<br></br>
-                Err on the side of caution, eat less than you think<br></br>
+                Similar strategy to travel
               </li>
-            </ul>}
-            {activeSection === 'Extra' && 
-            <ul className="list-group">
               <li className="list-group-item">
-                If you know your week will get busy, front load your steps and workouts.<br></br>
-                Consider your daily step average and multiply by 7, get this total number of steps every week.<br></br>
-                Don't worry if you mess up, just know how to get back on track and do this immediately.
+                Prioritize protein, then carbs, then fat for meals
               </li>
-            </ul>}
+              <li className="list-group-item">
+                Workout and get steps in before the event
+              </li>
+              <li className="list-group-item">
+                Err on the side of caution, eat less than you think
+              </li>
+            </ol>}
+            {activeSection === 'Tips' && 
+              <ol className="list-group">
+                <li className="list-group-item">
+                  If you know your week will get busy, front load your steps and workouts.
+                </li>
+                <li className="list-group-item">
+                  Consider your daily step average and multiply by 7, get this total number of steps every week.
+                </li>
+                <li className="list-group-item">
+                  Don't worry if you mess up, just know how to get back on track and do this immediately.
+                </li>
+              </ol>}
           </div>
         </div>
       </main>
