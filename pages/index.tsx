@@ -9,7 +9,7 @@ type Section = 'GoodFood' | 'BadFood' | 'TravelStrategy' | 'Occasions' | 'Tips';
 export default function Home() {
   const [activeSection, setActiveSection] = useState<Section | null>('GoodFood'); // Set 'GoodFood' as the default
   const [buttonStyles, setButtonStyles] = useState<Record<Section, string>>({
-    GoodFood: 'btn btn-secondary',
+    GoodFood: 'btn btn-success',
     BadFood: 'btn btn-secondary',
     TravelStrategy: 'btn btn-secondary',
     Occasions: 'btn btn-secondary',
@@ -71,7 +71,7 @@ export default function Home() {
               </button>
             </div>
 
-            {activeSection === 'GoodFood' && 
+          {activeSection === 'GoodFood' && 
             <ol className="list-group">
               <li className="list-group-item">
                 Chicken Breast
