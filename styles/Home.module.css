@@ -1,5 +1,6 @@
 .container {
   padding: 0 2rem;
+  position: relative;
 }
 
 .main {
@@ -126,4 +127,14 @@
   .logo img {
     filter: invert(1);
   }
+}
+
+.list-group {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  overflow: auto; /* Allow scrolling if content overflows */
+  max-height: 100%; /* Limit the maximum height */
 }
