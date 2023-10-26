@@ -100,6 +100,12 @@ export default function Home() {
               <li className="list-group-item">
                 Black Coffee
               </li>
+              <li className="list-group-item">
+                Sparkling Water (Flavored and unflavored)
+              </li>
+              <li className="list-group-item">
+                0 Calorie and 0 Sugar soft drinks
+              </li>
             </ol>}
             {activeSection === 'BadFood' && 
             <ol className="list-group">
@@ -129,6 +135,12 @@ export default function Home() {
               </li>
               <li className="list-group-item">
                 Condiments like ketchup, mayo, mustard
+              </li>
+              <li className="list-group-item">
+                Sodas
+              </li>
+              <li className="list-group-item">
+                Juices
               </li>
             </ol>}
             {activeSection === 'TravelStrategy' && 
@@ -171,6 +183,15 @@ export default function Home() {
                 </li>
                 <li className="list-group-item">
                   Don't worry if you mess up, just know how to get back on track and do this immediately.
+                </li>
+                <li className="list-group-item">
+                  Get obsessed with numbers and counting. Count everything, your steps, your workouts, your calories in and calories out.
+                </li>
+                <li className="list-group-item">
+                  Thinking about your fitness as a game to win often helps push you further than you thought you could go. Let's win the game.
+                </li>
+                <li className="list-group-item">
+                  Figure out what motivates and incentivizes you and expand upon it.
                 </li>
               </ol>}
           </div>
