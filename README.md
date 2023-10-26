@@ -3,12 +3,17 @@ The purpose of this app is to display all the information I currently have aroun
 
 # Release Notes
 ## v0.1.0
-Initial version
-Created foundation of app
-Using Bootstrap JS for CSS, not working perfectly yet.
-Designed to be used within an iframe on my [Notes](https://notes.salmanmalik.co/Fitness/Strategy_Guide) site.
+*October 25, 2023*
+- Initial version
+- Created foundation of app
+- Using Bootstrap JS for CSS, not working perfectly yet.
+- Designed to be used within an iframe on my [Notes](https://notes.salmanmalik.co/Fitness/Strategy_Guide) site.
 
 ## v0.1.1
+*October 26, 2023*
+- Cleaned up CSS, converted unorderd lists into ordered lists
+- Cleaned up README, added context for app and Release Notes section
+- Added button state, changes color based on whether it was clicked on or off
 
 ## Getting Started
 

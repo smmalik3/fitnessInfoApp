@@ -8,14 +8,36 @@ type Section = 'GoodFood' | 'BadFood' | 'TravelStrategy' | 'Occasions' | 'Tips';
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<Section | null>('GoodFood'); // Set 'GoodFood' as the default
+  const [buttonStyles, setButtonStyles] = useState<Record<Section, string>>({
+    GoodFood: 'btn btn-secondary',
+    BadFood: 'btn btn-secondary',
+    TravelStrategy: 'btn btn-secondary',
+    Occasions: 'btn btn-secondary',
+    Tips: 'btn btn-secondary',
+  });
 
   const toggleSection = (section: Section) => {
     if (activeSection === section) {
-      // If the same section is clicked again, hide it
+      // If the same section is clicked again, hide it and reset button style
       setActiveSection(null);
+      setButtonStyles((prevStyles) => ({
+        ...prevStyles,
+        [section]: 'btn btn-secondary',
+      }));
     } else {
-      // If a different section is clicked, show it
+      // If a different section is clicked, show it and update button style
       setActiveSection(section);
+      setButtonStyles((prevStyles) => ({
+        ...prevStyles,
+        [section]: 'btn btn-success', // Change to the desired color when clicked
+      }));
+      // Reset style of previously active button if any
+      if (activeSection) {
+        setButtonStyles((prevStyles) => ({
+          ...prevStyles,
+          [activeSection]: 'btn btn-secondary',
+        }));
+      }
     }
   };
 
@@ -32,11 +54,21 @@ export default function Home() {
           <div className={styles.card}>
             <h2>Things to keep in mind &rarr;</h2>
             <div className="btn-group" role="group" aria-label="categories">
-              <button onClick={() => toggleSection('GoodFood')} type="button" className="btn btn-secondary">Good Food</button>
-              <button onClick={() => toggleSection('BadFood')} type="button" className="btn btn-secondary">Bad Food</button>
-              <button onClick={() => toggleSection('TravelStrategy')} type="button" className="btn btn-secondary">Travel Strategy</button>
-              <button onClick={() => toggleSection('Occasions')} type="button" className="btn btn-secondary">Occasions</button>
-              <button onClick={() => toggleSection('Tips')} type="button" className="btn btn-secondary">Tips</button>
+              <button onClick={() => toggleSection('GoodFood')} type="button" className={buttonStyles.GoodFood}>
+                Good Food
+              </button>
+              <button onClick={() => toggleSection('BadFood')} type="button" className={buttonStyles.BadFood}>
+                Bad Food
+              </button>
+              <button onClick={() => toggleSection('TravelStrategy')} type="button" className={buttonStyles.TravelStrategy}>
+                Travel Strategy
+              </button>
+              <button onClick={() => toggleSection('Occasions')} type="button" className={buttonStyles.Occasions}>
+                Occasions
+              </button>
+              <button onClick={() => toggleSection('Tips')} type="button" className={buttonStyles.Tips}>
+                Tips
+              </button>
             </div>
 
             {activeSection === 'GoodFood' && 
